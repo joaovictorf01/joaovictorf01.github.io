@@ -1,0 +1,13 @@
+<h2>{{ welcomeMessage }}</h2>
+
+<div *ngIf="friends.length > 0; else noFriendsTemplate">
+  <ul>
+    <li *ngFor="let friend of friends">
+      {{ friend.name }} - {{ friend.birthday | date:'longDate' }}
+    </li>
+  </ul>
+</div>
+
+<ng-template #noFriendsTemplate>
+  <p>Você ainda não adicionou nenhum amigo. Vá para "Adicionar Amigo" para começar.</p>
+</ng-template>
