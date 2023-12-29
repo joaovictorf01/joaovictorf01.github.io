@@ -3,7 +3,7 @@
 <div *ngIf="friends.length > 0; else noFriendsTemplate">
   <ul>
     <li *ngFor="let friend of friends">
-      {{ friend.name }} - {{ friend.birthday | date:'longDate' }}
+      {{ friend.name }} - {{ friend.birthday | date:'dd/MM/yyyy' }}
     </li>
   </ul>
 </div>
